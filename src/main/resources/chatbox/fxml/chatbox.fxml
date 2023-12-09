@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="chatbox.ui.ChatBoxController"
+            prefHeight="700.0" prefWidth="500.0" maxHeight="700.0"
+            stylesheets="@../css/chatbox.css">
+
+    <HBox alignment="CENTER_LEFT"  spacing="5" prefWidth="500.0" prefHeight="55.0" maxHeight="55.0" >
+        <children>
+            <ImageView fitWidth="43.0" fitHeight="43.0"
+                       layoutX="35.0" layoutY="29.0"
+                       preserveRatio="true">
+                <Image url="@../images/Ellipse 35.png"/>
+                <HBox.margin>
+                    <Insets left="25.0" top="10.0" />
+                </HBox.margin>
+            </ImageView>
+
+            <Label prefWidth="116.0" prefHeight="43.0" text="Hocus Pocus"/>
+
+            <ImageView fitWidth="20.0" fitHeight="21.0"
+                       preserveRatio="true">
+                <Image url="@../icons/Ellipse 25.png"/>
+                <HBox.margin>
+                    <Insets left="220.0" />
+                </HBox.margin>
+            </ImageView>
+
+            <ImageView fitWidth="20.0" fitHeight="21.0"
+                       preserveRatio="true">
+                <Image url="@../icons/Ellipse 24.png"/>
+                <HBox.margin>
+                    <Insets left="10.0" />
+                </HBox.margin>
+            </ImageView>
+        </children>
+    </HBox>
+
+    <ScrollPane fx:id="messagesArea" layoutY="60.0"
+                prefWidth="500.0" prefHeight="550.0" maxHeight="550.0">
+
+        <VBox fx:id="vBox"
+              prefWidth="480.0" prefHeight="530.0">
+        </VBox>
+    </ScrollPane>
+
+    <ImageView fitWidth="461.0" fitHeight="60.0"
+               layoutX="35.0" layoutY="615.0"
+               preserveRatio="true">
+        <Image url="@../images/Rectangle 23.png"/>
+    </ImageView>
+
+    <TextField fx:id="message" layoutX="45.0" layoutY="625.0"
+               prefWidth="415.0" maxHeight="40.0"
+               promptText="Type here..." onKeyPressed="#handleKeyPressed"/>
+
+    <ImageView fitWidth="40.0" fitHeight="40.0"
+               layoutX="448.0" layoutY="625.0"
+               preserveRatio="true">
+        <Image url="@../icons/Ellipse 4.png"/>
+    </ImageView>
+
+    <ImageView fitWidth="28.0" fitHeight="30.0"
+               layoutX="459.0" layoutY="630.0"
+               preserveRatio="true">
+        <Image url="@../icons/image 4.png"/>
+    </ImageView>
+</AnchorPane>
